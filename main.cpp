@@ -10,10 +10,10 @@ int main(int argc, char* argv[])
 
     if (argv[1]) {
         if (std::filesystem::exists(argv[1])) {
-
+            std::cout << "[!] Working directory : " << argv[1] << std::endl;
         }
         else {
-            std::cout << "where is the vmp amk cocu.";
+            std::cout << "[-] The specified path does not contain vmp." << std::endl;
         }
     }
     else {
@@ -25,9 +25,7 @@ int main(int argc, char* argv[])
         bool Status = false;
         for (const auto& entry : fs::directory_iterator(std::filesystem::current_path()))
         {
-            string ext = fs::path(entry.path()).extension().string();
-            std::cout << ext << std::endl;
-            if (ext == ".vmp") { 
+            if (fs::path(entry.path()).extension().string() == ".vmp") {
                 Status = true;
                 vmpPath = entry;
             }
