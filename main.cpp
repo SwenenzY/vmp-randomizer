@@ -83,11 +83,31 @@ bool ObfuscateVMP(string path) {
                 // trim to VMCodeSectionName
                 std::string SectionString = str.substr(str.find("VMCodeSectionName")); // VMCodeSectionName=".Custom">
                 // trim VMCodeSectionName
+
+                // i found bug
+                // VMCodeSectionName=".test" OutputFileName="test.sys"> if have OutputFileName crashing
+
                 replaceAll(SectionString,"VMCodeSectionName=",""); //".Custom">
+
+                // if have OutputFileName
+                if (SectionString.find("OutputFileName") != std::string::npos) {
+                    // get last string OutputFileName="test.sys"> 
+                    std::string JunkString = str.substr(str.find("OutputFileName"));
+                    // remove from ".test" OutputFileName="test.sys">
+                    replaceAll(SectionString, JunkString, ""); //".Custom">
+                    // and = ".test"
+                    // ez fix
+                }
+               
                 // trim junk
                 replaceAll(SectionString, "\"", ""); // .Custom>
                 // trim junk
                 replaceAll(SectionString, ">", ""); // .Custom
+
+                // before check null
+                if (SectionString.find(" ") != std::string::npos) {
+                    replaceAll(SectionString, " ", "");
+                }
                 // print 
                 std::cout << "[!] Old Section : " << SectionString << std::endl;
 
