@@ -15,8 +15,8 @@ vmp-randomizer.exe
 [-] Vmp not specified. Trying to find automatically
 [!] Working directory : C:\Users\Administrator\source\repos\vmp-randomizer\x64\Release\
 [+] Starting obfuscation.
-[!] Old Section : << .kRvaYDnYDIuhNQXLfJssqswjM
-[+] New Section : << .HJxYKHiHtPJpnvXOQDH
+[!] Old Section : .kRvaYDnYDIuhNQXLfJssqswjM
+[+] New Section : .HJxYKHiHtPJpnvXOQDH
 [+] Successfly obfuscated.
 
 [-] Finished operation in 2ms
@@ -27,8 +27,8 @@ vmp-randomizer.exe C:\Users\Administrator\Desktop\vmp-randomizer.exe.vmp
 [+] Initializing...
 [!] Working directory : C:\Users\Administrator\Desktop\vmp-randomizer.exe.vmp
 [+] Starting obfuscation.
-[!] Old Section : << .HJxYKHiHtPJpnvXOQDH
-[+] New Section : << .JPzPgeCKlOhVfa
+[!] Old Section : .HJxYKHiHtPJpnvXOQDH
+[+] New Section : .JPzPgeCKlOhVfa
 [+] Successfly obfuscated.
 
 [-] Finished operation in 2ms
