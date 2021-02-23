@@ -89,7 +89,7 @@ bool ObfuscateVMP(string path) {
                 // trim junk
                 replaceAll(SectionString, ">", ""); // .Custom
                 // print 
-                std::cout << "[!] Old Section : << " << SectionString << std::endl;
+                std::cout << "[!] Old Section : " << SectionString << std::endl;
 
                 //setup random
                 srand((unsigned int)time(NULL));
@@ -99,7 +99,7 @@ bool ObfuscateVMP(string path) {
                 // create string from random number
                 string RandomSection = "." + random_string_only_char(RandomHash);
                 // print
-                std::cout << "[+] New Section : << " << RandomSection << std::endl;
+                std::cout << "[+] New Section : " << RandomSection << std::endl;
                 // replace old section to new section
                 replaceAll(str, SectionString, RandomSection);
                 // save status
