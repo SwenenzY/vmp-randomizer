@@ -1,5 +1,5 @@
 # Vmp Section Randomizer
-Thank you for your interest in my project :)
+Thank you for your interest in my project :) Don't forget star :)
 ### Why this project?
 Why not?
 
