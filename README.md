@@ -6,7 +6,7 @@ Why not?
 # Features
  - Auto find vmp in folder.
  - Find vmp in specified folder.
- - Name with random lenght
+ - Name with random length
  
 ### How can i use?
 ```
